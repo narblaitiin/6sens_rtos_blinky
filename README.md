@@ -1,4 +1,4 @@
-# Code for 6Sens Project : blinky application test for a customed MBDT50Q (based on nRF52840) board
+# Code for 6Sens Project : blinky application test for a customed MDBT50Q (based on nRF52840) board
 
 ## Overview
 Simply Blinky example to know how to install, to configure and to use Zephyr RTOS.
