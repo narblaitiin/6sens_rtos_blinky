@@ -11,7 +11,8 @@ With the jlink runner, you can use either the usual console or the one developed
 
 For Zephyr documentation, please click on this link: https://docs.zephyrproject.org/3.6.0/
 
-**Board used** : Original MDBT50Q board, powered by battery/solar panel. (see 6sens_prj repository/hardware part, for more information.)
+## Board used
+Original MDBT50Q board, powered by battery/solar panel. (see 6sens_prj repository/hardware part, for more information.)
 
 ## Building and Running
 The following commands clean build folder, build and flash the sample:
