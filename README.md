@@ -2,7 +2,7 @@
 
 ## Overview
 Simply Blinky example to know how to install, to configure and to use Zephyr RTOS.
-The Blinky example shows how to configure GPIO pins as outputs which can also be used to drive LEDs on the hardware usually delivered as "User LEDs" on many of the supported boards in Zephyr. The Blinky sample blinks green LED (Tx LED of RFM95W transmission) and an another green LED (Rx LED of RFM95W transmission) forever using GPIO API.
+The Blinky example shows how to configure GPIO pins as outputs which can also be used to drive LEDs on the hardware usually delivered as "User LEDs" on many of the supported boards in Zephyr. The Blinky sample blinks green LEDs forever using GPIO API.
 
 This application also prints "Hello World" to the console and allows us that the device tree board file is correct (especially UART communication).
 The version of Zephyr RTOS used is the version v4.0.0.

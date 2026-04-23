@@ -16,24 +16,24 @@
 #define SLEEP_TIME_MS   2000
 
 // device tree node identifiers for the LEDs (transmit and receive indicators)
-#define LED_TX DT_ALIAS(ledtx)
-#define LED_RX DT_ALIAS(ledrx)
+#define LED_1 DT_ALIAS(led1)
+#define LED_2 DT_ALIAS(led2)
 
 //  ========== globals =====================================================================
 // define GPIO configurations for the LEDs
-static const struct gpio_dt_spec led_tx = GPIO_DT_SPEC_GET(LED_TX, gpios);
-static const struct gpio_dt_spec led_rx = GPIO_DT_SPEC_GET(LED_RX, gpios);
+static const struct gpio_dt_spec led_1 = GPIO_DT_SPEC_GET(LED_1, gpios);
+static const struct gpio_dt_spec led_2 = GPIO_DT_SPEC_GET(LED_2, gpios);
 
 //  ========== main ========================================================================
 int8_t main(void)
 {
 	// configure the LEDs as active output pins
-	gpio_pin_configure_dt(&led_tx, GPIO_OUTPUT_ACTIVE);
-	gpio_pin_configure_dt(&led_rx, GPIO_OUTPUT_ACTIVE);
+	gpio_pin_configure_dt(&led_1, GPIO_OUTPUT_ACTIVE);
+	gpio_pin_configure_dt(&led_2, GPIO_OUTPUT_ACTIVE);
 
 	// turn off both LEDs initially
-	gpio_pin_set_dt(&led_tx, 0);
-	gpio_pin_set_dt(&led_rx, 0);
+	gpio_pin_set_dt(&led_1, 0);
+	gpio_pin_set_dt(&led_2, 0);
 
 	// infinite loop to toggle LEDs and print status
 	while (1) {
@@ -41,13 +41,13 @@ int8_t main(void)
 		printk("Hello World! %s\n", CONFIG_BOARD);
 
 		// toggle the transmit LED and check for errors
-		int8_t ret = gpio_pin_toggle_dt(&led_tx);
+		int8_t ret = gpio_pin_toggle_dt(&led_1);
 		if (ret < 0) {
 			return 0;
 		}
 
 		// toggle the receive LED and check for errors
-		ret = gpio_pin_toggle_dt(&led_rx);
+		ret = gpio_pin_toggle_dt(&led_2);
 		if (ret < 0) {
 			return 0;
 		}
