@@ -21,8 +21,8 @@
 
 //  ========== globals =====================================================================
 // define GPIO configurations for the LEDs
-static const struct gpio_dt_spec led_1 = GPIO_DT_SPEC_GET(LED_0, gpios);
-static const struct gpio_dt_spec led_2 = GPIO_DT_SPEC_GET(LED_1, gpios);
+static const struct gpio_dt_spec led_0 = GPIO_DT_SPEC_GET(LED_0, gpios);
+static const struct gpio_dt_spec led_1 = GPIO_DT_SPEC_GET(LED_1, gpios);
 
 //  ========== main ========================================================================
 int8_t main(void)
