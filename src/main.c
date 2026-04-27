@@ -15,7 +15,7 @@
 // time in milliseconds to wait between LED toggles (2000 ms = 2 seconds)
 #define SLEEP_TIME_MS   2000
 
-// device tree node identifiers for the LEDs (transmit and receive indicators)
+// device tree node identifiers for the LEDs
 #define LED_0 DT_ALIAS(led0)
 #define LED_1 DT_ALIAS(led1)
 
@@ -27,6 +27,8 @@ static const struct gpio_dt_spec led_1 = GPIO_DT_SPEC_GET(LED_1, gpios);
 //  ========== main ========================================================================
 int8_t main(void)
 {
+	int8_t ret;
+	
 	// test if GPIO is ready to use
 	if ((!gpio_is_ready_dt(&led_0)) & (!gpio_is_ready_dt(&led_1))) {
         return 0;
@@ -46,11 +48,10 @@ int8_t main(void)
 		printk("Hello World! %s\n", CONFIG_BOARD);
 
 		// toggle the LED and check for errors
-		int8_t ret = gpio_pin_toggle_dt(&led_0);
+		ret = gpio_pin_toggle_dt(&led_0);
 		if (ret < 0) {
 			return 0;
 		}
-
 
 		ret = gpio_pin_toggle_dt(&led_1);
 		if (ret < 0) {
