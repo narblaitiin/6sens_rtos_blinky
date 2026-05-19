@@ -5,11 +5,11 @@ Simply Blinky example to know how to install, to configure and to use Zephyr RTO
 The Blinky example shows how to configure GPIO pins as outputs which can also be used to drive LEDs on the hardware usually delivered as "User LEDs" on many of the supported boards in Zephyr. The Blinky sample blinks green LEDs forever using GPIO API.
 
 This application also prints "Hello World" to the console and allows us that the device tree board file is correct (especially UART communication).
-The version of Zephyr RTOS used is the version v4.0.0.
+The version of Zephyr RTOS used is the version v4.3.
 
 With the jlink runner, you can use either the usual console or the one developed by Segger (JLinkRTTViewer).
 
-For Zephyr documentation, please click on this link: https://docs.zephyrproject.org/4.0.0/
+For Zephyr documentation, please click on this link: https://docs.zephyrproject.org/4.3.0/
 
 ## Board used
 Original MDBT50Q board, powered by battery/solar panel. (see 6sens_prj repository/hardware part, for more information.)
